@@ -1,0 +1,32 @@
+
+{%extends "base.html" %}
+
+
+{% block cabezera%}
+    {%include 'incluido.html'%}
+    <title>Mi Pagina de Prueba</title>
+{%endblock%}
+
+{% block body%}
+{% load static %}
+
+<img class="foto"src="{% static 'foto.png' %}" alt="My image">
+<link rel="stylesheet"  href="{% static 'estilos/estilo.css' %}">
+<H1>mi nombre es {{nombre}}</H1>
+<h2>Tengo {{edad|add:"45"}} años<h2>
+
+<p>{% for num in rango %}
+    {% cycle '1' '2' '3' '4' %}
+{% endfor %}</p>
+
+<h2>{{fecha|date:"F d/:$m/$#!Y"}}</h2>
+
+<h5>{{valor |default:"Ok"}}</h5>
+
+
+
+{%include 'botones.html' with asd="BOTONAZUL" %}
+
+
+<table>{% lorem %}</table>
+{%endblock%}
