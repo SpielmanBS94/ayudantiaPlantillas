@@ -19,5 +19,8 @@ from appPlantillas.views import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('solicitud/',views.solicitudRespuesta),
     path('home/', views.home),
+    path('<str:rut>/<str:nombre>/', views.inicial),
+    path('<str:rut>/<str:nombre>/<str:nacionalidad>', views.inicial2),
 ]

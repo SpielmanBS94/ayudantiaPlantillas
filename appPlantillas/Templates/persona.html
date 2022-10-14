@@ -1,0 +1,13 @@
+<H1>mi nombre es {{persona.getNombre}} mi rut es {{persona.getRutFormato}}</H1>
+<h1>{{pais}}</h1>
+<h3>{{persona.funcionEjemplo}}</h3>
+<h5>{{texto}}</h5>
+<H1>Soy {{persona}}</H1>
+
+<form method="POST" action="/{{persona.getRut}}/{{persona.getNombre}}/">
+    {% csrf_token %}
+    <h5>INGRESA TU ELEMENTO</h5>
+    <input type="text" name="elemento">
+    <input type="hidden" name="elemento2" value ={{persona.getRut}}>
+    <input type="submit">
+</form>
