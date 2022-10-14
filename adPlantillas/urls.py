@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path
 from appPlantillas.views import views
 
+#Comentario Ejemplo
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('solicitud/',views.solicitudRespuesta),

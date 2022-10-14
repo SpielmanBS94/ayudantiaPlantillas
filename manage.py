@@ -3,7 +3,7 @@
 import os
 import sys
 
-
+#ESTO ES UN COMENTARIO EN EL ARCHIVO QUE VA A DETECTAR GITHUB
 def main():
     """Run administrative tasks."""
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'adPlantillas.settings')
